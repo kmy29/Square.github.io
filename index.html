@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <h1>Калькулятор</h1>
+    <form>
+      <label for="x1">x1:</label>
+      <input type="number" id="x1"><br>
+      <label for="x2">x2:</label>
+      <input type="number" id="x2"><br>
+      <label for="x3">x3:</label>
+      <input type="number" id="x3"><br>
+      <label for="x4">x4:</label>
+      <input type="number" id="x4"><br>	  
+      <label for="x5">x5:</label>
+      <input type="number" id="x5"><br>	  
+      <label for="x6">x6:</label>
+      <input type="number" id="x6"><br>	  
+      <label for="x7">x7:</label>
+      <input type="number" id="x7"><br>	  
+      <label for="x8">x8:</label>
+      <input type="number" id="x8"><br>	  
+      <label for="x9">x9:</label>
+      <input type="number" id="x9"><br>	  
+      <label for="x10">x10:</label>
+      <input type="number" id="x10"><br>	  
+      <label for="x11">x11:</label>
+      <input type="number" id="x11"><br>	  
+      <label for="x12">x12:</label>
+      <input type="number" id="x12"><br>	  
+      <label for="y1">y1:</label>
+      <input type="number" id="y1"><br>
+      <label for="y2">y2:</label>
+      <input type="number" id="y2"><br>
+      <label for="y3">y3:</label>
+      <input type="number" id="y3"><br>
+      <label for="y4">y4:</label>
+      <input type="number" id="y4"><br>	  
+      <label for="y5">y5:</label>
+      <input type="number" id="y5"><br>	  
+      <label for="y6">y6:</label>
+      <input type="number" id="y6"><br>	  
+      <label for="y7">y7:</label>
+      <input type="number" id="y7"><br>	  
+      <label for="y8">y8:</label>
+      <input type="number" id="y8"><br>	  
+      <label for="y9">y9:</label>
+      <input type="number" id="y9"><br>	  
+      <label for="y10">y10:</label>
+      <input type="number" id="y10"><br>	  
+      <label for="y11">y11:</label>
+      <input type="number" id="y11"><br>	  
+      <label for="y12">y12:</label>
+      <input type="number" id="y12"><br> 
+      <button type="button" onclick="calculate()">Розрахувати</button>
+    </form>
+    <h2>Результат:</h2>
+    <table>
+      <tr>
+        <th>Yi+1-Yi-1--</th>
+        <th>--Xi-1-Xi+--1</th>
+		<th>--Xi(Yi+1-Yi-1)--</th>
+		<th>--Yi(Xi-1-Xi+1)--</th>
+		<th>SumX</th>
+		<th>SumY</th>
+		<th>Square</th>
+      </tr>
+      <tr>
+        <td id="yDiff1"></td>
+        <td id="xDiffA"></td>
+        <td id="prod1A"></td>
+        <td id="prodA1"></td>
+		<td id="sum1"></td>
+        <td id="sum2"></td>
+        <td id="average"></td>
+      </tr>
+      <tr>
+        <td id="yDiff2"></td>
+        <td id="xDiffB"></td>
+        <td id="prod2A"></td>
+        <td id="prodA2"></td>			
+      </tr>
+      <tr>
+        <td id="yDiff3"></td>
+        <td id="xDiffC"></td>
+        <td id="prod3A"></td>
+        <td id="prodA3"></td>		
+      </tr>
+      <tr>
+        <td id="yDiff4"></td>
+        <td id="xDiffD"></td>
+        <td id="prod4A"></td>
+        <td id="prodA4"></td>			
+      </tr>  
+      <tr>
+        <td id="yDiff5"></td>
+        <td id="xDiffE"></td>
+        <td id="prod5A"></td>
+        <td id="prodA5"></td>		
+      </tr>
+      <tr>
+        <td id="yDiff6"></td>
+        <td id="xDiffF"></td>
+        <td id="prod6A"></td>
+        <td id="prodA6"></td>		
+      </tr>
+      <tr>
+        <td id="yDiff7"></td>
+        <td id="xDiffG"></td>
+        <td id="prod7A"></td>
+        <td id="prodA7"></td>			
+      </tr>
+      <tr>
+        <td id="yDiff8"></td>
+        <td id="xDiffH"></td>
+        <td id="prod8A"></td>
+        <td id="prodA8"></td>			
+      </tr>  
+      <tr>
+        <td id="yDiff9"></td>
+        <td id="xDiffI"></td>
+        <td id="prod9A"></td>
+        <td id="prodA9"></td>		
+      </tr>
+      <tr>
+        <td id="yDiff10"></td>
+        <td id="xDiffM"></td>
+        <td id="prod10A"></td>
+        <td id="prodA10"></td>		
+      </tr>
+      <tr>
+        <td id="yDiff11"></td>
+        <td id="xDiffN"></td>
+        <td id="prod11A"></td>
+        <td id="prodA11"></td>			
+      </tr>
+      <tr>
+        <td id="yDiff12"></td>
+        <td id="xDiffT"></td>
+        <td id="prod12A"></td>
+        <td id="prodA12"></td>			
+      </tr>  	  
+    </table>
+    
+    <script>
+      function calculate() {
+        const x1 = Number(document.getElementById("x1").value);
+        const x2 = Number(document.getElementById("x2").value);
+        const x3 = Number(document.getElementById("x3").value);
+        const x4 = Number(document.getElementById("x4").value);
+        const x5 = Number(document.getElementById("x5").value);
+        const x6 = Number(document.getElementById("x6").value);		
+        const x7 = Number(document.getElementById("x7").value);
+        const x8 = Number(document.getElementById("x8").value);
+        const x9 = Number(document.getElementById("x9").value);		
+        const x10 = Number(document.getElementById("x10").value);
+        const x11 = Number(document.getElementById("x11").value);
+        const x12 = Number(document.getElementById("x12").value);		
+        const y1 = Number(document.getElementById("y1").value);
+        const y2 = Number(document.getElementById("y2").value);
+        const y3 = Number(document.getElementById("y3").value);
+        const y4 = Number(document.getElementById("y4").value);
+        const y5 = Number(document.getElementById("y5").value);
+        const y6 = Number(document.getElementById("y6").value);		
+        const y7 = Number(document.getElementById("y7").value);
+        const y8 = Number(document.getElementById("y8").value);
+        const y9 = Number(document.getElementById("y9").value);		
+        const y10 = Number(document.getElementById("y10").value);
+        const y11 = Number(document.getElementById("y11").value);
+        const y12 = Number(document.getElementById("y12").value);	
+	   
+        const yDiff1 = y2 - y12;
+	    const yDiff2 = y3 - y1;
+	    const yDiff3 = y4 - y2;
+	    const yDiff4 = y5 - y3;
+	    const yDiff5 = y6 - y4;
+	    const yDiff6 = y7 - y5;
+	    const yDiff7 = y8 - y6;
+	    const yDiff8 = y9 - y7;
+	    const yDiff9 = y10 - y8;	  
+	    const yDiff10 = y11 - y9;
+	    const yDiff11 = y12 - y10;
+      	const yDiff12 = y1 - y11;	  	  
+        const xDiffA = x12 - x2;
+	    const xDiffB = x1 - x3;
+	    const xDiffC = x2 - x4;
+	    const xDiffD = x3 - x5;
+	    const xDiffE = x4 - x6;
+	    const xDiffF = x5 - x7;
+	    const xDiffG = x6 - x8;
+	    const xDiffH = x7 - x9;
+	    const xDiffI = x8 - x10;	  
+	    const xDiffM = x9 - x11;
+	    const xDiffN = x10 - x12;
+	    const xDiffT = x11 - x1;	  	  
+	    const prod1A = x1 * yDiff1;
+	    const prod2A = x2 * yDiff2;
+	    const prod3A = x3 * yDiff3;
+	    const prod4A = x4 * yDiff4;
+	    const prod5A = x5 * yDiff5;
+	    const prod6A = x6 * yDiff6;
+	    const prod7A = x7 * yDiff7;
+	    const prod8A = x8 * yDiff8;
+	    const prod9A = x9 * yDiff9;	  
+	    const prod10A = x10 * yDiff10;
+	    const prod11A = x11 * yDiff11;
+	    const prod12A = x12 * yDiff12;	  
+	    const prodA1 = y1 * xDiffA;
+	    const prodA2 = y2 * xDiffB;
+	    const prodA3 = y3 * xDiffC;
+	    const prodA4 = y4 * xDiffD;
+   	    const prodA5 = y5 * xDiffE;
+     	const prodA6 = y6 * xDiffF;
+	    const prodA7 = y7 * xDiffG;
+        const prodA8 = y8 * xDiffH;
+	    const prodA9 = y9 * xDiffI;	  
+	    const prodA10 = y10 * xDiffM;
+	    const prodA11 = y11 * xDiffN;
+	    const prodA12 = y12 * xDiffT;	  
+	    const sum1 = prod1A + prod2A + prod3A + prod4A + prod5A + prod6A + prod7A + prod8A + prod9A + prod10A + prod11A + prod12A;
+	    const sum2 = prodA1 + prodA2 + prodA3 + prodA4 + prodA5 + prodA6 + prodA7 + prodA8 + prodA9 + prodA10 + prodA11 + prodA12;
+		const hui1 = sum1 / 2;
+		const hui2 = sum2 / 2;
+		const hui3 = hui1+hui2
+	    const average = hui3 / 2;
+ 
+        document.getElementById("yDiff1").innerHTML =	yDiff1   .toFixed(3);
+        document.getElementById("yDiff2").innerHTML =	yDiff2   .toFixed(3);
+        document.getElementById("yDiff3").innerHTML =	yDiff3   .toFixed(3);
+        document.getElementById("yDiff4").innerHTML =	yDiff4   .toFixed(3);
+        document.getElementById("yDiff5").innerHTML =	yDiff5   .toFixed(3);
+        document.getElementById("yDiff6").innerHTML =	yDiff6   .toFixed(3);
+        document.getElementById("yDiff7").innerHTML =	yDiff7   .toFixed(3);
+        document.getElementById("yDiff8").innerHTML =	yDiff8   .toFixed(3);
+        document.getElementById("yDiff9").innerHTML =	yDiff9   .toFixed(3);
+        document.getElementById("yDiff10").innerHTML =	yDiff10   .toFixed(3);
+        document.getElementById("yDiff11").innerHTML =	yDiff11   .toFixed(3);
+        document.getElementById("yDiff12").innerHTML =	yDiff12   .toFixed(3);
+        document.getElementById("xDiffA").innerHTML =	xDiffA   .toFixed(3);
+        document.getElementById("xDiffB").innerHTML =	xDiffB   .toFixed(3);
+        document.getElementById("xDiffC").innerHTML =	xDiffC   .toFixed(3);
+        document.getElementById("xDiffD").innerHTML =	xDiffD   .toFixed(3);
+        document.getElementById("xDiffE").innerHTML =	xDiffE   .toFixed(3);
+        document.getElementById("xDiffF").innerHTML =	xDiffF   .toFixed(3);
+        document.getElementById("xDiffG").innerHTML =	xDiffG   .toFixed(3);
+        document.getElementById("xDiffH").innerHTML =	xDiffH   .toFixed(3);
+        document.getElementById("xDiffI").innerHTML =	xDiffI    .toFixed(3);
+        document.getElementById("xDiffM").innerHTML =	xDiffM   .toFixed(3);
+        document.getElementById("xDiffN").innerHTML =	xDiffN   .toFixed(3);
+        document.getElementById("xDiffT").innerHTML =	xDiffT   .toFixed(3);
+        document.getElementById("prod1A").innerHTML =	prod1A   .toFixed(3);
+        document.getElementById("prod2A").innerHTML =	prod2A   .toFixed(3);
+        document.getElementById("prod3A").innerHTML =	prod3A   .toFixed(3);
+        document.getElementById("prod4A").innerHTML =	prod4A   .toFixed(3);
+        document.getElementById("prod5A").innerHTML =	prod5A   .toFixed(3);
+        document.getElementById("prod6A").innerHTML =	prod6A   .toFixed(3);
+        document.getElementById("prod7A").innerHTML =	prod7A   .toFixed(3);
+        document.getElementById("prod8A").innerHTML =	prod8A   .toFixed(3);
+        document.getElementById("prod9A").innerHTML =	prod9A   .toFixed(3);
+        document.getElementById("prod10A").innerHTML =	prod10A   .toFixed(3);
+        document.getElementById("prod11A").innerHTML =	prod11A   .toFixed(3);
+        document.getElementById("prod12A").innerHTML =	prod12A   .toFixed(3);
+        document.getElementById("prodA1").innerHTML =	prodA1   .toFixed(3);
+        document.getElementById("prodA2").innerHTML =	prodA2   .toFixed(3);
+        document.getElementById("prodA3").innerHTML =	prodA3   .toFixed(3);
+        document.getElementById("prodA4").innerHTML =	prodA4   .toFixed(3);
+        document.getElementById("prodA5").innerHTML =	prodA5   .toFixed(3);
+        document.getElementById("prodA6").innerHTML =	prodA6   .toFixed(3);
+        document.getElementById("prodA7").innerHTML =	prodA7   .toFixed(3);
+        document.getElementById("prodA8").innerHTML =	prodA8   .toFixed(3);
+        document.getElementById("prodA9").innerHTML =	prodA9   .toFixed(3);
+        document.getElementById("prodA10").innerHTML =	prodA10   .toFixed(3);
+        document.getElementById("prodA11").innerHTML =	prodA11   .toFixed(3);
+        document.getElementById("prodA12").innerHTML =	prodA12   .toFixed(3);
+        document.getElementById("sum1").innerHTML =	sum1   .toFixed(3);
+        document.getElementById("sum2").innerHTML =	sum2   .toFixed(3);
+        document.getElementById("average").innerHTML =	average   .toFixed(3);
+ ;
+      }
+    </script>
+  </body>
+</html>
+
+	
+	
