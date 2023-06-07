@@ -1,0 +1,128 @@
+header {
+  background-color: #3b3c93; /* Колір фону шапки */
+  padding: 5px; /* Відступи внутрішнього вмісту шапки */
+  text-align: top; /* Вирівнювання тексту заголовка по центру */
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 1px;
+}
+
+.container {
+  display: flex;
+  line-height: 8px; 
+  column-gap: 28px; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+.left,
+.right {
+  flex: 1;
+  padding: 1px;
+  
+}
+
+.left {
+  margin-left: 90px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.plus-icon {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.active .accordion-content {
+  display: block;
+}
+
+.article {
+  display: flex;
+  line-height: 40px; 
+  margin-left: auto;
+  margin-right: auto;	
+width: 15%; 
+color: #ffffff;
+position: relative;
+}
+
+.article2 {
+  display: flex;
+  line-height: 20px; 
+  margin-left: auto;
+  margin-right: auto;	
+width: 38%; 
+color: #cecee4;
+position: relative;
+white-space: nowrap;
+}
+
+.article3 {
+  display: flex;
+  line-height: 30px; 
+  margin-left: auto;
+  margin-right: auto;	
+width: 10%; 
+color: #3b3c93;
+position: relative;
+white-space: nowrap;
+padding: 1px; 
+}
+
+.article4 {
+  display: flex;
+  line-height: 30px; 
+  margin-left: auto;
+  margin-right: auto;	
+width: 10%; 
+color: #3b3c93;
+position: relative;
+white-space: nowrap;
+padding: 1px; 
+}
+
+ button {
+  display: flex;
+  line-height: 20px; 
+  margin-left: auto;
+  margin-right: auto;	
+width: 15%; 
+color: #333;
+position: relative;
+align-items: center;
+justify-content: center;
+  height: 25px;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
